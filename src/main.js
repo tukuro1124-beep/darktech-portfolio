@@ -14,44 +14,76 @@ import { initActiveSectionObserver } from './lib/navActive.js';
 import { trapFocus } from './lib/a11yFocusTrap.js';
 import { initDevOverlay } from './lib/devOverlay.js';
 import { mountFluidBackground } from './background/fluidAdapter.js';
+import { initFluidMenu } from './background/fluidMenu.js';
+import { syncActiveNav } from './sections/navbar.js';
 
 const SECTION_IDS = ['top', 'work', 'impact', 'experience', 'contact'];
 
 let loadVersion = 0;
 let cleanupSectionObserver = () => {};
 let cleanupFocusTrap = () => {};
-let observedReady = false;
+let previousState = null;
+let fluidMenuMounted = false;
 
 initStore();
 bindGlobalEvents();
 initDevOverlay();
 
-mountFluidBackground().catch(() => {
-  showToast('Background effect unavailable.');
-});
+mountFluidBackground()
+  .then(() => {
+    if (!fluidMenuMounted) {
+      initFluidMenu();
+      fluidMenuMounted = true;
+    }
+  })
+  .catch(() => {
+    showToast('Background effect unavailable.');
+  });
 
 subscribe((state) => {
-  renderApp(state);
-  syncDocumentMeta(state);
-  syncMotionMode(state);
-  syncDrawerAccessibility(state);
+  const shouldRender =
+    !previousState ||
+    previousState.lang !== state.lang ||
+    previousState.status !== state.status ||
+    previousState.content !== state.content ||
+    previousState.drawerOpen !== state.drawerOpen;
 
-  if (state.status === 'ready' && state.content) {
-    initReveal(document);
-    initCountUp(document.getElementById('impact'));
+  if (shouldRender) {
+    renderApp(state);
 
-    if (!observedReady) {
-      observedReady = true;
+    if (state.status === 'ready' && state.content) {
+      initReveal(document);
+      initCountUp(document.getElementById('impact'));
+
+      cleanupSectionObserver();
       cleanupSectionObserver = initActiveSectionObserver(SECTION_IDS, (activeId) => {
         setState({ activeSection: activeId });
       });
     }
   }
 
+  if (shouldRender || !previousState || previousState.activeSection !== state.activeSection) {
+    syncActiveNav(state.activeSection);
+  }
+
+  if (shouldRender || !previousState || previousState.lang !== state.lang || previousState.content !== state.content) {
+    syncDocumentMeta(state);
+  }
+
+  if (!previousState || previousState.reducedMotion !== state.reducedMotion) {
+    syncMotionMode(state);
+  }
+
+  if (!previousState || previousState.drawerOpen !== state.drawerOpen || shouldRender) {
+    syncDrawerAccessibility(state);
+  }
+
   if (state.errorMsg) {
     showToast(state.errorMsg);
     setState({ errorMsg: '' });
   }
+
+  previousState = { ...state };
 });
 
 requestContent(getState().lang);
@@ -77,9 +109,7 @@ function bindGlobalEvents() {
     }
 
     if (action === 'close-drawer') {
-      if (target.classList.contains('drawer')) {
-        setState({ drawerOpen: false });
-      } else if (target.matches('button')) {
+      if (target.classList.contains('drawer') || target.matches('button')) {
         setState({ drawerOpen: false });
       }
       return;

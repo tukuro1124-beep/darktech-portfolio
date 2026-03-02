@@ -1,45 +1,48 @@
-﻿export function initActiveSectionObserver(sectionIds, onActiveChange) {
-  const ratios = new Map();
-  const nodes = sectionIds
-    .map((id) => document.getElementById(id))
-    .filter(Boolean);
-
+export function initActiveSectionObserver(sectionIds, onActiveChange) {
+  const nodes = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
   if (!nodes.length) return () => {};
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        ratios.set(entry.target.id, entry.intersectionRatio);
-      });
+  let lastActive = '';
+  let rafId = 0;
 
-      const navBottom = document.getElementById('navbar')?.getBoundingClientRect().bottom || 0;
-      let winner = sectionIds[0];
-      let bestRatio = -1;
-      let bestDistance = Number.POSITIVE_INFINITY;
+  const computeActive = () => {
+    rafId = 0;
 
-      sectionIds.forEach((id) => {
-        const node = document.getElementById(id);
-        if (!node) return;
+    const navBottom = document.getElementById('navbar')?.getBoundingClientRect().bottom || 0;
+    const pivot = navBottom + 24;
+    let active = sectionIds[0];
 
-        const ratio = ratios.get(id) ?? 0;
-        const distance = Math.abs(node.getBoundingClientRect().top - navBottom);
+    nodes.forEach((node) => {
+      if (node.getBoundingClientRect().top <= pivot) {
+        active = node.id;
+      }
+    });
 
-        if (ratio > bestRatio || (ratio === bestRatio && distance < bestDistance)) {
-          winner = id;
-          bestRatio = ratio;
-          bestDistance = distance;
-        }
-      });
-
-      onActiveChange(winner);
-    },
-    {
-      threshold: [0, 0.1, 0.2, 0.35, 0.5, 0.7, 1],
-      rootMargin: '-12% 0px -55% 0px'
+    const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+    if (nearBottom) {
+      active = nodes[nodes.length - 1].id;
     }
-  );
 
-  nodes.forEach((node) => observer.observe(node));
+    if (active !== lastActive) {
+      lastActive = active;
+      onActiveChange(active);
+    }
+  };
 
-  return () => observer.disconnect();
+  const onScrollOrResize = () => {
+    if (rafId) return;
+    rafId = window.requestAnimationFrame(computeActive);
+  };
+
+  window.addEventListener('scroll', onScrollOrResize, { passive: true });
+  window.addEventListener('resize', onScrollOrResize, { passive: true });
+  computeActive();
+
+  return () => {
+    if (rafId) {
+      window.cancelAnimationFrame(rafId);
+    }
+    window.removeEventListener('scroll', onScrollOrResize);
+    window.removeEventListener('resize', onScrollOrResize);
+  };
 }

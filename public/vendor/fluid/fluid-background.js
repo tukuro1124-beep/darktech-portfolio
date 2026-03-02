@@ -46,11 +46,13 @@ let config = {
     PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 20,
     CURL: 30,
-    SPLAT_RADIUS: 0.25,
+    SPLAT_RADIUS: 0.11,
     SPLAT_FORCE: 6000,
     SHADING: true,
-    COLORFUL: true,
+    COLORFUL: false,
     COLOR_UPDATE_SPEED: 10,
+    USE_WHITE: true,
+    WHITE_INTENSITY: 1.25,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
     TRANSPARENT: false,
@@ -64,6 +66,8 @@ let config = {
     SUNRAYS_RESOLUTION: 196,
     SUNRAYS_WEIGHT: 1.0,
 }
+
+window.__fluidConfig = config;
 
 function pointerPrototype () {
     this.id = -1;
@@ -1146,6 +1150,8 @@ function updateKeywords () {
     displayMaterial.setKeywords(displayKeywords);
 }
 
+window.__fluidUpdateKeywords = updateKeywords;
+
 updateKeywords();
 initFramebuffers();
 multipleSplats(parseInt(Math.random() * 20) + 5);
@@ -1408,9 +1414,10 @@ function splatPointer (pointer) {
 function multipleSplats (amount) {
     for (let i = 0; i < amount; i++) {
         const color = generateColor();
-        color.r *= 10.0;
-        color.g *= 10.0;
-        color.b *= 10.0;
+        const boost = config.USE_WHITE ? 3.5 : 10.0;
+        color.r *= boost;
+        color.g *= boost;
+        color.b *= boost;
         const x = Math.random();
         const y = Math.random();
         const dx = 1000 * (Math.random() - 0.5);
@@ -1544,6 +1551,14 @@ function correctDeltaY (delta) {
 }
 
 function generateColor () {
+    if (config.USE_WHITE) {
+        return {
+            r: config.WHITE_INTENSITY,
+            g: config.WHITE_INTENSITY,
+            b: config.WHITE_INTENSITY
+        };
+    }
+
     let c = HSVtoRGB(Math.random(), 1.0, 1.0);
     c.r *= 0.15;
     c.g *= 0.15;

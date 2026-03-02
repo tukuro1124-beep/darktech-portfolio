@@ -1,7 +1,7 @@
 ﻿import { el } from '../lib/dom.js';
 
 export function renderImpact(content) {
-  const section = el('article', 'impact card hoverable', { id: 'impact' });
+  const section = el('article', 'impact card hoverable');
   const impact = content.impact || {};
 
   section.appendChild(el('h2', '', {}, impact.title || 'Impact'));

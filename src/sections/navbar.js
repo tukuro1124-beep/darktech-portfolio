@@ -109,6 +109,18 @@ export function renderNavbar(state, content) {
   return fragment;
 }
 
+export function syncActiveNav(activeSection) {
+  const links = document.querySelectorAll('.navbar__link[data-target]');
+  links.forEach((link) => {
+    link.classList.toggle('is-active', link.dataset.target === activeSection);
+  });
+
+  const drawerLinks = document.querySelectorAll('.drawer__item[data-target]');
+  drawerLinks.forEach((link) => {
+    link.classList.toggle('is-active', link.dataset.target === activeSection);
+  });
+}
+
 function renderDrawer(state, labels) {
   const drawer = el('div', `drawer${state.drawerOpen ? ' is-open' : ''}`, {
     id: 'mobile-drawer',
@@ -126,7 +138,7 @@ function renderDrawer(state, labels) {
   ['top', 'work', 'impact', 'experience', 'contact'].forEach((id) => {
     const link = el(
       'a',
-      'drawer__item',
+      `drawer__item${state.activeSection === id ? ' is-active' : ''}`,
       {
         href: `#${id}`,
         'data-action': 'nav',
