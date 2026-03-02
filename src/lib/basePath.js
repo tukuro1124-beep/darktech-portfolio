@@ -1,4 +1,4 @@
-﻿export function getBasePath() {
+export function getBasePath() {
   const metaValue = document
     .querySelector('meta[name="base-path"]')
     ?.getAttribute('content')
@@ -9,7 +9,7 @@
   }
 
   const envBase = import.meta.env.BASE_URL || '/';
-  if (envBase && envBase !== '/') {
+  if (envBase && envBase !== '/' && envBase !== './' && envBase !== '.') {
     return normalizeBase(envBase);
   }
 
@@ -37,7 +37,7 @@ export function withBase(path) {
 
 function normalizeBase(value) {
   const trimmed = value.trim();
-  if (!trimmed || trimmed === '/') return '/';
+  if (!trimmed || trimmed === '/' || trimmed === './' || trimmed === '.') return '/';
   const noLeading = trimmed.startsWith('/') ? trimmed.slice(1) : trimmed;
   const noTrailing = noLeading.endsWith('/') ? noLeading.slice(0, -1) : noLeading;
   return `/${noTrailing}/`;
