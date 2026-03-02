@@ -21,7 +21,10 @@ Current fluid options are configured there, including:
 - `BLOOM: false`
 - `SUNRAYS: false`
 - `IMMEDIATE: true`
-- `TRIGGER: 'hover'`
+- `AUTO: true`
+- `INTERVAL: 1800`
+- `SPLAT_RADIUS: 0.06`
+- `SPLAT_FORCE: 1800`
 
 To tweak the background behavior, edit the options object in `src/background/fluidAdapter.js`.
 

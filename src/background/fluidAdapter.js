@@ -8,19 +8,17 @@ export function mountFluidBackground() {
   if (mounted) return Promise.resolve(true);
 
   WebGLFluid(canvas, {
-    TRIGGER: 'hover',
     IMMEDIATE: true,
     AUTO: true,
-    INTERVAL: 7000,
-    SPLAT_COUNT: 2,
-    SPLAT_RADIUS: 0.12,
+    INTERVAL: 1800,
+    SPLAT_COUNT: 1,
+    SPLAT_RADIUS: 0.06,
+    SPLAT_FORCE: 1800,
     TRANSPARENT: true,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
     BLOOM: false,
     SUNRAYS: false,
-    COLORFUL: false,
-    SHADING: true,
-    PAUSED: false
+    COLORFUL: false
   });
 
   mounted = true;
