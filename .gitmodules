@@ -1,0 +1,3 @@
+[submodule "vendor/WebGL-Fluid-Simulation"]
+	path = vendor/WebGL-Fluid-Simulation
+	url = https://github.com/PavelDoGreat/WebGL-Fluid-Simulation

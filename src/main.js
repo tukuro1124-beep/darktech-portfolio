@@ -14,7 +14,6 @@ import { initActiveSectionObserver } from './lib/navActive.js';
 import { trapFocus } from './lib/a11yFocusTrap.js';
 import { initDevOverlay } from './lib/devOverlay.js';
 import { mountFluidBackground } from './background/fluidAdapter.js';
-import { initFluidMenu } from './background/fluidMenu.js';
 import { syncActiveNav } from './sections/navbar.js';
 
 const SECTION_IDS = ['top', 'work', 'impact', 'experience', 'contact'];
@@ -23,22 +22,14 @@ let loadVersion = 0;
 let cleanupSectionObserver = () => {};
 let cleanupFocusTrap = () => {};
 let previousState = null;
-let fluidMenuMounted = false;
 
 initStore();
 bindGlobalEvents();
 initDevOverlay();
 
-mountFluidBackground()
-  .then(() => {
-    if (!fluidMenuMounted) {
-      initFluidMenu();
-      fluidMenuMounted = true;
-    }
-  })
-  .catch(() => {
-    showToast('Background effect unavailable.');
-  });
+mountFluidBackground().catch(() => {
+  showToast('Background effect unavailable.');
+});
 
 subscribe((state) => {
   const shouldRender =

@@ -1,28 +1,28 @@
-﻿import { withBase } from '../lib/basePath.js';
+﻿import WebGLFluid from 'webgl-fluid';
 
-let fluidLoadPromise;
+let mounted = false;
 
 export function mountFluidBackground() {
   const canvas = document.getElementById('bg-canvas');
   if (!canvas) return Promise.resolve(false);
+  if (mounted) return Promise.resolve(true);
 
-  if (fluidLoadPromise) {
-    return fluidLoadPromise;
-  }
-
-  window.__FLUID_BG_CANVAS_ID__ = 'bg-canvas';
-  window.__FLUID_BASE_PATH__ = withBase('/vendor/fluid/');
-  window.ga = window.ga || (() => {});
-
-  fluidLoadPromise = new Promise((resolve, reject) => {
-    const script = document.createElement('script');
-    script.src = withBase('/vendor/fluid/fluid-background.js');
-    script.defer = true;
-    script.onload = () => resolve(true);
-    script.onerror = () => reject(new Error('Failed to load fluid background script'));
-    document.body.appendChild(script);
+  WebGLFluid(canvas, {
+    TRIGGER: 'hover',
+    IMMEDIATE: true,
+    AUTO: true,
+    INTERVAL: 7000,
+    SPLAT_COUNT: 2,
+    SPLAT_RADIUS: 0.12,
+    TRANSPARENT: true,
+    BACK_COLOR: { r: 0, g: 0, b: 0 },
+    BLOOM: false,
+    SUNRAYS: false,
+    COLORFUL: false,
+    SHADING: true,
+    PAUSED: false
   });
 
-  return fluidLoadPromise;
+  mounted = true;
+  return Promise.resolve(true);
 }
-
