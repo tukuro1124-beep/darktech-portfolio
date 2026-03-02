@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="base-path" content="/" />
+    <meta name="description" content="Bilingual portfolio" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="bg-layer" class="bg-layer" aria-hidden="true">
+      <canvas id="bg-canvas"></canvas>
+    </div>
+
+    <a class="skip-link u-sr-only u-sr-only--focusable" href="#main">Skip to content</a>
+    <div class="u-sr-only" id="sr-live" aria-live="polite" aria-atomic="true"></div>
+
+    <header class="navbar" id="navbar"></header>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+    <main class="main" id="main" tabindex="-1">
+      <div class="container" id="app"></div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
