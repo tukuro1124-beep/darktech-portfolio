@@ -2,7 +2,6 @@
 import { markReveal, resetRevealSequence } from './lib/motion.js';
 import { renderNavbar } from './sections/navbar.js';
 import { renderHero } from './sections/hero.js';
-import { renderImpact } from './sections/impact.js';
 import { renderFeatured } from './sections/featured.js';
 import { renderMoreWork } from './sections/moreWork.js';
 import { renderExperience } from './sections/experience.js';
@@ -35,11 +34,6 @@ export function renderApp(state) {
   markReveal(hero);
   topSection.append(hero);
 
-  const impactSection = el('section', 'section', { id: 'impact' });
-  const impact = renderImpact(content);
-  markReveal(impact);
-  impactSection.append(impact);
-
   const featuredSection = renderFeatured(content, state.lang);
   markReveal(featuredSection.firstElementChild);
 
@@ -58,7 +52,7 @@ export function renderApp(state) {
 
   const footer = renderFooter(content);
 
-  fragment.append(topSection, impactSection, featuredSection, moreWorkSection, experienceSection, footer);
+  fragment.append(topSection, featuredSection, moreWorkSection, experienceSection, footer);
 
   clear(appHost);
   appHost.appendChild(fragment);

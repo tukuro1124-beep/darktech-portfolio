@@ -9,14 +9,13 @@ import { renderApp } from './renderApp.js';
 import { validateContent } from './lib/validateContent.js';
 import { showToast } from './lib/toast.js';
 import { initReveal } from './lib/motion.js';
-import { initCountUp } from './lib/countUp.js';
 import { initActiveSectionObserver } from './lib/navActive.js';
 import { trapFocus } from './lib/a11yFocusTrap.js';
 import { initDevOverlay } from './lib/devOverlay.js';
 import { mountFluidBackground } from './background/fluidAdapter.js';
 import { syncActiveNav } from './sections/navbar.js';
 
-const SECTION_IDS = ['top', 'work', 'impact', 'experience', 'contact'];
+const SECTION_IDS = ['top', 'work', 'experience', 'contact'];
 
 let loadVersion = 0;
 let cleanupSectionObserver = () => {};
@@ -44,7 +43,6 @@ subscribe((state) => {
 
     if (state.status === 'ready' && state.content) {
       initReveal(document);
-      initCountUp(document.getElementById('impact'));
 
       cleanupSectionObserver();
       cleanupSectionObserver = initActiveSectionObserver(SECTION_IDS, (activeId) => {

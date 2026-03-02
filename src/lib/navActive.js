@@ -1,4 +1,4 @@
-export function initActiveSectionObserver(sectionIds, onActiveChange) {
+﻿export function initActiveSectionObserver(sectionIds, onActiveChange) {
   const nodes = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
   if (!nodes.length) return () => {};
 
@@ -9,14 +9,35 @@ export function initActiveSectionObserver(sectionIds, onActiveChange) {
     rafId = 0;
 
     const navBottom = document.getElementById('navbar')?.getBoundingClientRect().bottom || 0;
-    const pivot = navBottom + 24;
-    let active = sectionIds[0];
+    const viewportHeight = window.innerHeight;
+    const pivotY = navBottom + 24;
+
+    let active = nodes[0].id;
+    let bestScore = -1;
+    let bestDistance = Number.POSITIVE_INFINITY;
 
     nodes.forEach((node) => {
-      if (node.getBoundingClientRect().top <= pivot) {
+      const rect = node.getBoundingClientRect();
+      const visibleTop = Math.max(rect.top, navBottom);
+      const visibleBottom = Math.min(rect.bottom, viewportHeight);
+      const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+      const score = visibleHeight / Math.max(rect.height, 1);
+      const distance = Math.abs(rect.top - pivotY);
+
+      if (score > bestScore || (score === bestScore && distance < bestDistance)) {
+        bestScore = score;
+        bestDistance = distance;
         active = node.id;
       }
     });
+
+    if (bestScore <= 0) {
+      nodes.forEach((node) => {
+        if (node.getBoundingClientRect().top <= pivotY) {
+          active = node.id;
+        }
+      });
+    }
 
     const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
     if (nearBottom) {

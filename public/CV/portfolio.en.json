@@ -1,195 +1,195 @@
 ﻿{
-  "meta": {
-    "name_en": "Tu Minh Tran",
-    "name_vi": "Tran Tu Minh",
-    "title": "Software Engineer | Systems and Product Delivery",
-    "description": "Bilingual portfolio of Tu Minh Tran.",
-    "location": "Ho Chi Minh City, Vietnam",
-    "email": "minhtran.dev@gmail.com",
-    "phone": "+84 000 000 000",
-    "links": {
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "portfolio": "",
-      "cv": ""
-    }
-  },
-  "hero": {
-    "badge": "Open to backend and platform roles",
-    "tagline": "I design resilient services, ship pragmatic products, and keep execution predictable under delivery pressure.",
-    "about_paragraphs": [
-      "I work across backend engineering, system design, and product implementation with a strong focus on reliability.",
-      "My approach combines clear architecture, disciplined iteration, and measurable outcomes for users and teams."
-    ],
-    "current_line": "Current focus: API reliability, deployment automation, and developer experience improvements."
-  },
-  "impact": {
-    "title": "Impact Metrics",
-    "subtitle": "Measured outcomes across recent delivery cycles",
-    "metrics": [
-      {
-        "value": "12+",
-        "value_num": 12,
-        "value_suffix": "+",
-        "display": "12+",
-        "animate": true,
-        "label": "Products and modules shipped",
-        "note": "From MVP builds to production hardening"
-      },
-      {
-        "value": "99.95%",
-        "value_num": 99.95,
-        "value_suffix": "%",
-        "display": "99.95%",
-        "animate": true,
-        "label": "Observed uptime",
-        "note": "Service-level reliability over 12 months"
-      },
-      {
-        "value": "0.5-1.0s",
-        "value_num": 0,
-        "value_suffix": "",
-        "display": "0.5-1.0s",
-        "animate": false,
-        "label": "API latency window",
-        "note": "p95 on standard transactional endpoints"
-      },
-      {
-        "value": "35%",
-        "value_num": 35,
-        "value_suffix": "%",
-        "display": "35%",
-        "animate": true,
-        "label": "Infrastructure cost reduction",
-        "note": "Query tuning, caching policy, and autoscale reviews"
-      }
-    ]
-  },
-  "featured": {
-    "title": "Featured Work",
-    "project": {
-      "name": "Unified Commerce Operations Platform",
-      "meta": "B2B Operations | 2024-2025",
-      "context": "A fragmented operational workflow caused data drift and slow execution across support and fulfillment teams.",
-      "role": "I led backend architecture decisions, core API implementation, and rollout planning with QA and ops.",
-      "bullets": [
-        "Defined bounded service layers and standardized contract-first APIs.",
-        "Introduced event-driven synchronization for order and inventory states.",
-        "Added runtime observability dashboards and failure triage playbooks."
-      ],
-      "constraints": [
-        "Kept migration incremental to avoid downtime for existing operators.",
-        "Prioritized data consistency over feature breadth in early releases.",
-        "Accepted short-term duplication to reduce deployment risk."
-      ],
-      "architecture": [
-        "Node.js services with PostgreSQL and Redis caching",
-        "Async workers for retryable background jobs",
-        "Centralized telemetry and alert routing"
-      ],
-      "tech_chips": [
-        "Node.js",
-        "PostgreSQL",
-        "Redis",
-        "Docker",
-        "GitHub Actions",
-        "OpenTelemetry"
-      ],
-      "links": {
-        "case_study": "",
-        "repo": "https://github.com/",
-        "demo": ""
-      },
-      "image": ""
-    }
-  },
-  "more_work": {
-    "title": "More Work",
-    "subtitle": "Additional selected projects",
-    "items": [
-      {
-        "name": "Internal SLA Monitoring Hub",
-        "meta": "Platform tooling",
-        "desc": "Unified health checks and escalation routing to reduce mean-time-to-detection."
-      },
-      {
-        "name": "Release Risk Scoring Utility",
-        "meta": "Delivery automation",
-        "desc": "Automated pre-release checks that surfaced high-risk diffs before deployment windows."
-      },
-      {
-        "name": "Data Export Gateway",
-        "meta": "Integrations",
-        "desc": "Built secure export flows with strict rate controls for partner integrations."
-      }
-    ]
-  },
-  "experience": {
-    "title": "Experience",
-    "subtitle": "Roles and ownership",
-    "items": [
-      {
-        "date": "2023-Present",
-        "role": "Software Engineer - Product and Platform",
-        "desc": "Owned backend features, architecture updates, and incident response improvements across multiple products."
-      },
-      {
-        "date": "2021-2023",
-        "role": "Backend Engineer",
-        "desc": "Delivered APIs, persistence design, and cross-team integration projects with a focus on reliability."
-      },
-      {
-        "date": "2019-2021",
-        "role": "Junior Software Engineer",
-        "desc": "Implemented feature modules, bug triage workflows, and quality checks in agile delivery teams."
-      }
-    ]
-  },
-  "skills": {
-    "title": "Skills",
-    "items": [
-      {
-        "key": "Languages",
-        "value": "JavaScript, TypeScript, SQL"
-      },
-      {
-        "key": "Backend",
-        "value": "Node.js, REST APIs, queue workers"
-      },
-      {
-        "key": "Data",
-        "value": "PostgreSQL, Redis, schema tuning"
-      },
-      {
-        "key": "Ops",
-        "value": "Docker, CI/CD, observability"
-      },
-      {
-        "key": "Workflow",
-        "value": "System design, incident response, mentoring"
-      }
-    ]
-  },
-  "contact": {
-    "title": "Contact",
-    "subtitle": "Open to practical engineering conversations",
-    "cta": "If you are building products that need reliable delivery, I would be glad to connect.",
-    "links": [
-      {
-        "label": "Email",
-        "href": "mailto:minhtran.dev@gmail.com"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com/"
-      }
-    ]
-  },
-  "footer": {
-    "note": "Built with vanilla HTML, CSS, and JavaScript."
-  }
+    "meta":  {
+                 "name_en":  "Tu Minh Tran",
+                 "name_vi":  "Tran Tu Minh",
+                 "title":  "Software Engineer | Systems and Product Delivery",
+                 "description":  "Bilingual portfolio of Tu Minh Tran.",
+                 "location":  "Ho Chi Minh City, Vietnam",
+                 "email":  "minhtran.dev@gmail.com",
+                 "phone":  "+84 000 000 000",
+                 "links":  {
+                               "github":  "https://github.com/",
+                               "linkedin":  "https://www.linkedin.com/",
+                               "portfolio":  "",
+                               "cv":  ""
+                           }
+             },
+    "hero":  {
+                 "badge":  "Open to backend and platform roles",
+                 "tagline":  "I design resilient services, ship pragmatic products, and keep execution predictable under delivery pressure.",
+                 "about_paragraphs":  [
+                                          "I work across backend engineering, system design, and product implementation with a strong focus on reliability.",
+                                          "My approach combines clear architecture, disciplined iteration, and measurable outcomes for users and teams."
+                                      ],
+                 "current_line":  "Current focus: API reliability, deployment automation, and developer experience improvements."
+             },
+    "impact":  {
+                   "title":  "Impact Metrics",
+                   "subtitle":  "Measured outcomes across recent delivery cycles",
+                   "metrics":  [
+                                   {
+                                       "value":  "12+",
+                                       "value_num":  12,
+                                       "value_suffix":  "+",
+                                       "display":  "12+",
+                                       "animate":  true,
+                                       "label":  "Products and modules shipped",
+                                       "note":  "From MVP builds to production hardening"
+                                   },
+                                   {
+                                       "value":  "99.95%",
+                                       "value_num":  99.95,
+                                       "value_suffix":  "%",
+                                       "display":  "99.95%",
+                                       "animate":  true,
+                                       "label":  "Observed uptime",
+                                       "note":  "Service-level reliability over 12 months"
+                                   },
+                                   {
+                                       "value":  "0.5-1.0s",
+                                       "value_num":  0,
+                                       "value_suffix":  "",
+                                       "display":  "0.5-1.0s",
+                                       "animate":  false,
+                                       "label":  "API latency window",
+                                       "note":  "p95 on standard transactional endpoints"
+                                   },
+                                   {
+                                       "value":  "35%",
+                                       "value_num":  35,
+                                       "value_suffix":  "%",
+                                       "display":  "35%",
+                                       "animate":  true,
+                                       "label":  "Infrastructure cost reduction",
+                                       "note":  "Query tuning, caching policy, and autoscale reviews"
+                                   }
+                               ]
+               },
+    "featured":  {
+                     "title":  "Featured Work",
+                     "project":  {
+                                     "name":  "Unified Commerce Operations Platform",
+                                     "meta":  "B2B Operations | 2024-2025",
+                                     "context":  "A fragmented operational workflow caused data drift and slow execution across support and fulfillment teams.",
+                                     "role":  "I led backend architecture decisions, core API implementation, and rollout planning with QA and ops.",
+                                     "bullets":  [
+                                                     "Defined bounded service layers and standardized contract-first APIs.",
+                                                     "Introduced event-driven synchronization for order and inventory states.",
+                                                     "Added runtime observability dashboards and failure triage playbooks."
+                                                 ],
+                                     "constraints":  [
+                                                         "Kept migration incremental to avoid downtime for existing operators.",
+                                                         "Prioritized data consistency over feature breadth in early releases.",
+                                                         "Accepted short-term duplication to reduce deployment risk."
+                                                     ],
+                                     "architecture":  [
+                                                          "Node.js services with PostgreSQL and Redis caching",
+                                                          "Async workers for retryable background jobs",
+                                                          "Centralized telemetry and alert routing"
+                                                      ],
+                                     "tech_chips":  [
+                                                        "Node.js",
+                                                        "PostgreSQL",
+                                                        "Redis",
+                                                        "Docker",
+                                                        "GitHub Actions",
+                                                        "OpenTelemetry"
+                                                    ],
+                                     "links":  {
+                                                   "case_study":  "",
+                                                   "repo":  "",
+                                                   "demo":  ""
+                                               },
+                                     "image":  ""
+                                 }
+                 },
+    "more_work":  {
+                      "title":  "More Work",
+                      "subtitle":  "Additional selected projects",
+                      "items":  [
+                                    {
+                                        "name":  "Internal SLA Monitoring Hub",
+                                        "meta":  "Platform tooling",
+                                        "desc":  "Unified health checks and escalation routing to reduce mean-time-to-detection."
+                                    },
+                                    {
+                                        "name":  "Release Risk Scoring Utility",
+                                        "meta":  "Delivery automation",
+                                        "desc":  "Automated pre-release checks that surfaced high-risk diffs before deployment windows."
+                                    },
+                                    {
+                                        "name":  "Data Export Gateway",
+                                        "meta":  "Integrations",
+                                        "desc":  "Built secure export flows with strict rate controls for partner integrations."
+                                    }
+                                ]
+                  },
+    "experience":  {
+                       "title":  "Experience",
+                       "subtitle":  "Roles and ownership",
+                       "items":  [
+                                     {
+                                         "date":  "2023-Present",
+                                         "role":  "Software Engineer - Product and Platform",
+                                         "desc":  "Owned backend features, architecture updates, and incident response improvements across multiple products."
+                                     },
+                                     {
+                                         "date":  "2021-2023",
+                                         "role":  "Backend Engineer",
+                                         "desc":  "Delivered APIs, persistence design, and cross-team integration projects with a focus on reliability."
+                                     },
+                                     {
+                                         "date":  "2019-2021",
+                                         "role":  "Junior Software Engineer",
+                                         "desc":  "Implemented feature modules, bug triage workflows, and quality checks in agile delivery teams."
+                                     }
+                                 ]
+                   },
+    "skills":  {
+                   "title":  "Skills",
+                   "items":  [
+                                 {
+                                     "key":  "Languages",
+                                     "value":  "JavaScript, TypeScript, SQL"
+                                 },
+                                 {
+                                     "key":  "Backend",
+                                     "value":  "Node.js, REST APIs, queue workers"
+                                 },
+                                 {
+                                     "key":  "Data",
+                                     "value":  "PostgreSQL, Redis, schema tuning"
+                                 },
+                                 {
+                                     "key":  "Ops",
+                                     "value":  "Docker, CI/CD, observability"
+                                 },
+                                 {
+                                     "key":  "Workflow",
+                                     "value":  "System design, incident response, mentoring"
+                                 }
+                             ]
+               },
+    "contact":  {
+                    "title":  "Contact",
+                    "subtitle":  "Open to practical engineering conversations",
+                    "cta":  "If you are building products that need reliable delivery, I would be glad to connect.",
+                    "links":  [
+                                  {
+                                      "label":  "Email",
+                                      "href":  "mailto:minhtran.dev@gmail.com"
+                                  },
+                                  {
+                                      "label":  "LinkedIn",
+                                      "href":  "https://www.linkedin.com/"
+                                  },
+                                  {
+                                      "label":  "GitHub",
+                                      "href":  "https://github.com/"
+                                  }
+                              ]
+                },
+    "footer":  {
+                   "note":  "Built with vanilla HTML, CSS, and JavaScript."
+               }
 }

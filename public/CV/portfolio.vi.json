@@ -1,195 +1,195 @@
 ﻿{
-  "meta": {
-    "name_en": "Tu Minh Tran",
-    "name_vi": "Tran Tu Minh",
-    "title": "Ky su phan mem | Van hanh he thong va giao san pham",
-    "description": "Trang portfolio song ngu cua Tran Tu Minh.",
-    "location": "TP. Ho Chi Minh, Viet Nam",
-    "email": "minhtran.dev@gmail.com",
-    "phone": "+84 000 000 000",
-    "links": {
-      "github": "https://github.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "portfolio": "",
-      "cv": ""
-    }
-  },
-  "hero": {
-    "badge": "San sang cho vi tri backend va platform",
-    "tagline": "Toi xay dung dich vu on dinh, giao san pham thuc dung, va giu tien do thuc thi ro rang duoi ap luc delivery.",
-    "about_paragraphs": [
-      "Toi lam viec o giao diem giua backend, thiet ke he thong va trien khai san pham voi uu tien cao cho do tin cay.",
-      "Cach lam cua toi ket hop kien truc ro rang, vong lap ky luat va ket qua co the do luong cho nguoi dung va doi ngu."
-    ],
-    "current_line": "Trong tam hien tai: do tin cay API, tu dong hoa trien khai, va nang cao trai nghiem lap trinh vien."
-  },
-  "impact": {
-    "title": "Chi so tac dong",
-    "subtitle": "Ket qua da do luong trong cac chu ky giao hang gan day",
-    "metrics": [
-      {
-        "value": "12+",
-        "value_num": 12,
-        "value_suffix": "+",
-        "display": "12+",
-        "animate": true,
-        "label": "San pham va module da giao",
-        "note": "Tu MVP den giai doan van hanh production"
-      },
-      {
-        "value": "99.95%",
-        "value_num": 99.95,
-        "value_suffix": "%",
-        "display": "99.95%",
-        "animate": true,
-        "label": "Do san sang quan sat duoc",
-        "note": "Do tin cay dich vu trong 12 thang"
-      },
-      {
-        "value": "0.5-1.0s",
-        "value_num": 0,
-        "value_suffix": "",
-        "display": "0.5-1.0s",
-        "animate": false,
-        "label": "Khoang do tre API",
-        "note": "p95 cho cac endpoint giao dich thong dung"
-      },
-      {
-        "value": "35%",
-        "value_num": 35,
-        "value_suffix": "%",
-        "display": "35%",
-        "animate": true,
-        "label": "Giam chi phi ha tang",
-        "note": "Toi uu truy van, chinh sach cache va danh gia autoscale"
-      }
-    ]
-  },
-  "featured": {
-    "title": "Du an noi bat",
-    "project": {
-      "name": "Nen tang van hanh thuong mai hop nhat",
-      "meta": "Van hanh B2B | 2024-2025",
-      "context": "Quy trinh van hanh phan manh gay lech du lieu va lam cham toc do phoi hop giua cac nhom ho tro va giao nhan.",
-      "role": "Toi phu trach quyet dinh kien truc backend, trien khai API cot loi va ke hoach rollout cung QA va ops.",
-      "bullets": [
-        "Xac lap cac lop dich vu theo bounded context va API contract-first.",
-        "Ap dung dong bo su kien cho trang thai don hang va ton kho.",
-        "Bo sung dashboard quan sat runtime va playbook xu ly su co."
-      ],
-      "constraints": [
-        "Di chuyen tung buoc de tranh downtime cho nhan su van hanh.",
-        "Uu tien tinh nhat quan du lieu hon do mo tinh nang o giai doan dau.",
-        "Chap nhan mot so phan trung lap ngan han de giam rui ro trien khai."
-      ],
-      "architecture": [
-        "Dich vu Node.js voi PostgreSQL va cache Redis",
-        "Worker bat dong bo cho job nen co retry",
-        "He thong telemetry tap trung va dieu huong canh bao"
-      ],
-      "tech_chips": [
-        "Node.js",
-        "PostgreSQL",
-        "Redis",
-        "Docker",
-        "GitHub Actions",
-        "OpenTelemetry"
-      ],
-      "links": {
-        "case_study": "",
-        "repo": "https://github.com/",
-        "demo": ""
-      },
-      "image": ""
-    }
-  },
-  "more_work": {
-    "title": "Du an khac",
-    "subtitle": "Mot so du an da trien khai",
-    "items": [
-      {
-        "name": "SLA Monitoring Hub noi bo",
-        "meta": "Cong cu platform",
-        "desc": "Hop nhat health check va luong canh bao de giam thoi gian phat hien su co."
-      },
-      {
-        "name": "Cong cu cham diem rui ro release",
-        "meta": "Tu dong hoa delivery",
-        "desc": "Tu dong kiem tra truoc release de canh bao thay doi co rui ro cao truoc cua so deploy."
-      },
-      {
-        "name": "Data Export Gateway",
-        "meta": "Tich hop",
-        "desc": "Xay dung luong xuat du lieu an toan voi gioi han toc do chat cho doi tac."
-      }
-    ]
-  },
-  "experience": {
-    "title": "Kinh nghiem",
-    "subtitle": "Vai tro va pham vi phu trach",
-    "items": [
-      {
-        "date": "2023-Den nay",
-        "role": "Software Engineer - Product va Platform",
-        "desc": "Phu trach tinh nang backend, cap nhat kien truc va nang cao quy trinh ung pho su co cho nhieu san pham."
-      },
-      {
-        "date": "2021-2023",
-        "role": "Backend Engineer",
-        "desc": "Trien khai API, thiet ke du lieu va cac du an tich hop lien phong ban voi trong tam do tin cay."
-      },
-      {
-        "date": "2019-2021",
-        "role": "Junior Software Engineer",
-        "desc": "Phat trien module tinh nang, quy trinh xu ly loi va kiem tra chat luong trong doi agile."
-      }
-    ]
-  },
-  "skills": {
-    "title": "Ky nang",
-    "items": [
-      {
-        "key": "Ngon ngu",
-        "value": "JavaScript, TypeScript, SQL"
-      },
-      {
-        "key": "Backend",
-        "value": "Node.js, REST API, queue worker"
-      },
-      {
-        "key": "Du lieu",
-        "value": "PostgreSQL, Redis, toi uu schema"
-      },
-      {
-        "key": "Van hanh",
-        "value": "Docker, CI/CD, observability"
-      },
-      {
-        "key": "Phuong phap",
-        "value": "System design, incident response, mentoring"
-      }
-    ]
-  },
-  "contact": {
-    "title": "Lien he",
-    "subtitle": "San sang trao doi ve bai toan ky thuat thuc te",
-    "cta": "Neu ban dang xay dung san pham can do tin cay cao, toi rat san long ket noi.",
-    "links": [
-      {
-        "label": "Email",
-        "href": "mailto:minhtran.dev@gmail.com"
-      },
-      {
-        "label": "LinkedIn",
-        "href": "https://www.linkedin.com/"
-      },
-      {
-        "label": "GitHub",
-        "href": "https://github.com/"
-      }
-    ]
-  },
-  "footer": {
-    "note": "Xay dung bang HTML, CSS va JavaScript thuan."
-  }
+    "meta":  {
+                 "name_en":  "Tu Minh Tran",
+                 "name_vi":  "Tran Tu Minh",
+                 "title":  "Ky su phan mem | Van hanh he thong va giao san pham",
+                 "description":  "Trang portfolio song ngu cua Tran Tu Minh.",
+                 "location":  "TP. Ho Chi Minh, Viet Nam",
+                 "email":  "minhtran.dev@gmail.com",
+                 "phone":  "+84 000 000 000",
+                 "links":  {
+                               "github":  "https://github.com/",
+                               "linkedin":  "https://www.linkedin.com/",
+                               "portfolio":  "",
+                               "cv":  ""
+                           }
+             },
+    "hero":  {
+                 "badge":  "San sang cho vi tri backend va platform",
+                 "tagline":  "Toi xay dung dich vu on dinh, giao san pham thuc dung, va giu tien do thuc thi ro rang duoi ap luc delivery.",
+                 "about_paragraphs":  [
+                                          "Toi lam viec o giao diem giua backend, thiet ke he thong va trien khai san pham voi uu tien cao cho do tin cay.",
+                                          "Cach lam cua toi ket hop kien truc ro rang, vong lap ky luat va ket qua co the do luong cho nguoi dung va doi ngu."
+                                      ],
+                 "current_line":  "Trong tam hien tai: do tin cay API, tu dong hoa trien khai, va nang cao trai nghiem lap trinh vien."
+             },
+    "impact":  {
+                   "title":  "Chi so tac dong",
+                   "subtitle":  "Ket qua da do luong trong cac chu ky giao hang gan day",
+                   "metrics":  [
+                                   {
+                                       "value":  "12+",
+                                       "value_num":  12,
+                                       "value_suffix":  "+",
+                                       "display":  "12+",
+                                       "animate":  true,
+                                       "label":  "San pham va module da giao",
+                                       "note":  "Tu MVP den giai doan van hanh production"
+                                   },
+                                   {
+                                       "value":  "99.95%",
+                                       "value_num":  99.95,
+                                       "value_suffix":  "%",
+                                       "display":  "99.95%",
+                                       "animate":  true,
+                                       "label":  "Do san sang quan sat duoc",
+                                       "note":  "Do tin cay dich vu trong 12 thang"
+                                   },
+                                   {
+                                       "value":  "0.5-1.0s",
+                                       "value_num":  0,
+                                       "value_suffix":  "",
+                                       "display":  "0.5-1.0s",
+                                       "animate":  false,
+                                       "label":  "Khoang do tre API",
+                                       "note":  "p95 cho cac endpoint giao dich thong dung"
+                                   },
+                                   {
+                                       "value":  "35%",
+                                       "value_num":  35,
+                                       "value_suffix":  "%",
+                                       "display":  "35%",
+                                       "animate":  true,
+                                       "label":  "Giam chi phi ha tang",
+                                       "note":  "Toi uu truy van, chinh sach cache va danh gia autoscale"
+                                   }
+                               ]
+               },
+    "featured":  {
+                     "title":  "Du an noi bat",
+                     "project":  {
+                                     "name":  "Nen tang van hanh thuong mai hop nhat",
+                                     "meta":  "Van hanh B2B | 2024-2025",
+                                     "context":  "Quy trinh van hanh phan manh gay lech du lieu va lam cham toc do phoi hop giua cac nhom ho tro va giao nhan.",
+                                     "role":  "Toi phu trach quyet dinh kien truc backend, trien khai API cot loi va ke hoach rollout cung QA va ops.",
+                                     "bullets":  [
+                                                     "Xac lap cac lop dich vu theo bounded context va API contract-first.",
+                                                     "Ap dung dong bo su kien cho trang thai don hang va ton kho.",
+                                                     "Bo sung dashboard quan sat runtime va playbook xu ly su co."
+                                                 ],
+                                     "constraints":  [
+                                                         "Di chuyen tung buoc de tranh downtime cho nhan su van hanh.",
+                                                         "Uu tien tinh nhat quan du lieu hon do mo tinh nang o giai doan dau.",
+                                                         "Chap nhan mot so phan trung lap ngan han de giam rui ro trien khai."
+                                                     ],
+                                     "architecture":  [
+                                                          "Dich vu Node.js voi PostgreSQL va cache Redis",
+                                                          "Worker bat dong bo cho job nen co retry",
+                                                          "He thong telemetry tap trung va dieu huong canh bao"
+                                                      ],
+                                     "tech_chips":  [
+                                                        "Node.js",
+                                                        "PostgreSQL",
+                                                        "Redis",
+                                                        "Docker",
+                                                        "GitHub Actions",
+                                                        "OpenTelemetry"
+                                                    ],
+                                     "links":  {
+                                                   "case_study":  "",
+                                                   "repo":  "",
+                                                   "demo":  ""
+                                               },
+                                     "image":  ""
+                                 }
+                 },
+    "more_work":  {
+                      "title":  "Du an khac",
+                      "subtitle":  "Mot so du an da trien khai",
+                      "items":  [
+                                    {
+                                        "name":  "SLA Monitoring Hub noi bo",
+                                        "meta":  "Cong cu platform",
+                                        "desc":  "Hop nhat health check va luong canh bao de giam thoi gian phat hien su co."
+                                    },
+                                    {
+                                        "name":  "Cong cu cham diem rui ro release",
+                                        "meta":  "Tu dong hoa delivery",
+                                        "desc":  "Tu dong kiem tra truoc release de canh bao thay doi co rui ro cao truoc cua so deploy."
+                                    },
+                                    {
+                                        "name":  "Data Export Gateway",
+                                        "meta":  "Tich hop",
+                                        "desc":  "Xay dung luong xuat du lieu an toan voi gioi han toc do chat cho doi tac."
+                                    }
+                                ]
+                  },
+    "experience":  {
+                       "title":  "Kinh nghiem",
+                       "subtitle":  "Vai tro va pham vi phu trach",
+                       "items":  [
+                                     {
+                                         "date":  "2023-Den nay",
+                                         "role":  "Software Engineer - Product va Platform",
+                                         "desc":  "Phu trach tinh nang backend, cap nhat kien truc va nang cao quy trinh ung pho su co cho nhieu san pham."
+                                     },
+                                     {
+                                         "date":  "2021-2023",
+                                         "role":  "Backend Engineer",
+                                         "desc":  "Trien khai API, thiet ke du lieu va cac du an tich hop lien phong ban voi trong tam do tin cay."
+                                     },
+                                     {
+                                         "date":  "2019-2021",
+                                         "role":  "Junior Software Engineer",
+                                         "desc":  "Phat trien module tinh nang, quy trinh xu ly loi va kiem tra chat luong trong doi agile."
+                                     }
+                                 ]
+                   },
+    "skills":  {
+                   "title":  "Ky nang",
+                   "items":  [
+                                 {
+                                     "key":  "Ngon ngu",
+                                     "value":  "JavaScript, TypeScript, SQL"
+                                 },
+                                 {
+                                     "key":  "Backend",
+                                     "value":  "Node.js, REST API, queue worker"
+                                 },
+                                 {
+                                     "key":  "Du lieu",
+                                     "value":  "PostgreSQL, Redis, toi uu schema"
+                                 },
+                                 {
+                                     "key":  "Van hanh",
+                                     "value":  "Docker, CI/CD, observability"
+                                 },
+                                 {
+                                     "key":  "Phuong phap",
+                                     "value":  "System design, incident response, mentoring"
+                                 }
+                             ]
+               },
+    "contact":  {
+                    "title":  "Lien he",
+                    "subtitle":  "San sang trao doi ve bai toan ky thuat thuc te",
+                    "cta":  "Neu ban dang xay dung san pham can do tin cay cao, toi rat san long ket noi.",
+                    "links":  [
+                                  {
+                                      "label":  "Email",
+                                      "href":  "mailto:minhtran.dev@gmail.com"
+                                  },
+                                  {
+                                      "label":  "LinkedIn",
+                                      "href":  "https://www.linkedin.com/"
+                                  },
+                                  {
+                                      "label":  "GitHub",
+                                      "href":  "https://github.com/"
+                                  }
+                              ]
+                },
+    "footer":  {
+                   "note":  "Xay dung bang HTML, CSS va JavaScript thuan."
+               }
 }

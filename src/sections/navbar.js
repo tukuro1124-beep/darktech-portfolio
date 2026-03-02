@@ -6,7 +6,6 @@ const LABELS = {
   en: {
     top: 'Top',
     work: 'Work',
-    impact: 'Impact',
     experience: 'Experience',
     contact: 'Contact',
     menu: 'Open menu',
@@ -16,7 +15,6 @@ const LABELS = {
   vi: {
     top: 'Dau trang',
     work: 'Du an',
-    impact: 'Tac dong',
     experience: 'Kinh nghiem',
     contact: 'Lien he',
     menu: 'Mo menu',
@@ -25,7 +23,7 @@ const LABELS = {
   }
 };
 
-const SECTION_IDS = ['top', 'work', 'impact', 'experience', 'contact'];
+const SECTION_IDS = ['top', 'work', 'experience', 'contact'];
 
 export function renderNavbar(state, content) {
   const labels = LABELS[state.lang] || LABELS.en;
@@ -135,7 +133,7 @@ function renderDrawer(state, labels) {
     tabindex: '-1'
   });
 
-  ['top', 'work', 'impact', 'experience', 'contact'].forEach((id) => {
+  SECTION_IDS.forEach((id) => {
     const link = el(
       'a',
       `drawer__item${state.activeSection === id ? ' is-active' : ''}`,
